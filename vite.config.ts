@@ -12,6 +12,27 @@ const config = defineConfig({
     "*": "vp check --fix",
   },
   fmt: {
+    singleQuote: true,
+    printWidth: 80,
+    sortImports: {
+      groups: [
+        "type-import",
+        ["value-builtin", "value-external"],
+        "type-internal",
+        "value-internal",
+        ["type-parent", "type-sibling", "type-index"],
+        ["value-parent", "value-sibling", "value-index"],
+        "unknown",
+      ],
+    },
+    sortTailwindcss: {
+      stylesheet: "./src/styles/globals.css",
+      functions: ["clsx", "cn"],
+      preserveWhitespace: true,
+    },
+    sortPackageJson: {
+      sortScripts: true,
+    },
   },
   lint: {
     jsPlugins: [{ name: "vite-plus", specifier: "vite-plus/oxlint-plugin" }],
