@@ -1,2 +1,18 @@
 allowBuilds:
   esbuild: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - lightningcss
+
+overrides:
+  vite: 'npm:@voidzero-dev/vite-plus-core@latest'
+  vitest: '4.1.9'
+
+peerDependencyRules:
+  allowAny:
+    - 'vite'
+    - 'vitest'
+  allowedVersions:
+    vite: '*'
+    vitest: '*'
