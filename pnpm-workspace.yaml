@@ -16,7 +16,3 @@ peerDependencyRules:
   allowedVersions:
     vite: '*'
     vitest: '*'
-
-# [Possible Vercel platform bug 🤷‍♂️ - Feedback - Vercel Community](https://community.vercel.com/t/possible-vercel-platform-bug/44481)
-packages:
-  - '.'
