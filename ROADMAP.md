@@ -501,7 +501,7 @@ Once you've completed these exercises:
   - [x] Create the contact page (`/contact`) with a UI-only form and contact links ✅ 2026-06-26
   - [x] Add a shared layout with header and footer ✅ 2026-06-26
   - [x] Implement header navigation with active link styling ✅ 2026-06-26
-  - [ ] Style with Tailwind CSS and make the site responsive
+  - [x] Style with Tailwind CSS and make the site responsive ✅ 2026-06-26
   - [ ] Bonus: add dark mode, transitions, custom 404, or animations
 - [ ] Build Exercise 2: Blog with Dynamic Routes
   - [ ] Create a blog list page (`/blog`) with title, excerpt, and date for each post
