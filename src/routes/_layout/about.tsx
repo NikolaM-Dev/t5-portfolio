@@ -1,13 +1,15 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { Main } from '#/shared/components/main';
+
 export const Route = createFileRoute('/_layout/about')({
   component: RouteComponent,
 });
 
 function RouteComponent() {
   return (
-    <main className="p-10">
-      <h1 className="my-4 text-4xl font-bold">About</h1>
+    <Main>
+      <h1 className="text-4xl font-bold">About</h1>
 
       <h2 className="my-4 text-3xl font-bold">Backgrounb</h2>
       <p>
@@ -74,6 +76,6 @@ function RouteComponent() {
         software de autoedición, como por ejemplo Aldus PageMaker, el cual
         incluye versiones de Lorem Ipsum.
       </p>
-    </main>
+    </Main>
   );
 }

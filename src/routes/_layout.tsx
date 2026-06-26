@@ -9,15 +9,19 @@ export const Route = createFileRoute('/_layout')({
 
 function RouteComponent() {
   return (
-    <div className="flex h-screen flex-col items-center justify-between px-20 py-10">
-      <div>
+    <div className="flex h-screen flex-col justify-between px-10 py-5 md:m-auto md:max-w-4xl">
+      <section>
         <header>
           <Navbar />
         </header>
+        <hr />
         <Outlet />
-      </div>
+      </section>
 
-      <Footer />
+      <section>
+        <hr />
+        <Footer />
+      </section>
     </div>
   );
 }

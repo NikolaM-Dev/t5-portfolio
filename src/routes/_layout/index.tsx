@@ -1,11 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { Main } from '#/shared/components/main';
+
 export const Route = createFileRoute('/_layout/')({ component: Home });
 
 function Home() {
   return (
-    <main>
-      <h1 className="my-4 text-4xl font-bold">Home</h1>
+    <Main>
+      <h1 className="text-4xl font-bold">Home</h1>
 
       <h2 className="my-4 text-3xl font-bold">Introduction</h2>
       <p>
@@ -49,6 +51,6 @@ function Home() {
           </a>
         </li>
       </ul>
-    </main>
+    </Main>
   );
 }

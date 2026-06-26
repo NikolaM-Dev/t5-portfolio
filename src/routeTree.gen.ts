@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LayoutRouteImport } from './routes/_layout'
+import { Route as SplatRouteImport } from './routes/$'
 import { Route as LayoutIndexRouteImport } from './routes/_layout/index'
 import { Route as LayoutProjectsRouteImport } from './routes/_layout/projects'
 import { Route as LayoutContactRouteImport } from './routes/_layout/contact'
@@ -17,6 +18,11 @@ import { Route as LayoutAboutRouteImport } from './routes/_layout/about'
 
 const LayoutRoute = LayoutRouteImport.update({
   id: '/_layout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LayoutIndexRoute = LayoutIndexRouteImport.update({
@@ -41,12 +47,14 @@ const LayoutAboutRoute = LayoutAboutRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
+  '/$': typeof SplatRoute
   '/': typeof LayoutIndexRoute
   '/about': typeof LayoutAboutRoute
   '/contact': typeof LayoutContactRoute
   '/projects': typeof LayoutProjectsRoute
 }
 export interface FileRoutesByTo {
+  '/$': typeof SplatRoute
   '/about': typeof LayoutAboutRoute
   '/contact': typeof LayoutContactRoute
   '/projects': typeof LayoutProjectsRoute
@@ -54,6 +62,7 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/$': typeof SplatRoute
   '/_layout': typeof LayoutRouteWithChildren
   '/_layout/about': typeof LayoutAboutRoute
   '/_layout/contact': typeof LayoutContactRoute
@@ -62,11 +71,12 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/projects'
+  fullPaths: '/$' | '/' | '/about' | '/contact' | '/projects'
   fileRoutesByTo: FileRoutesByTo
-  to: '/about' | '/contact' | '/projects' | '/'
+  to: '/$' | '/about' | '/contact' | '/projects' | '/'
   id:
     | '__root__'
+    | '/$'
     | '/_layout'
     | '/_layout/about'
     | '/_layout/contact'
@@ -75,6 +85,7 @@ export interface FileRouteTypes {
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  SplatRoute: typeof SplatRoute
   LayoutRoute: typeof LayoutRouteWithChildren
 }
 
@@ -85,6 +96,13 @@ declare module '@tanstack/react-router' {
       path: ''
       fullPath: '/'
       preLoaderRoute: typeof LayoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_layout/': {
@@ -136,6 +154,7 @@ const LayoutRouteWithChildren =
   LayoutRoute._addFileChildren(LayoutRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
+  SplatRoute: SplatRoute,
   LayoutRoute: LayoutRouteWithChildren,
 }
 export const routeTree = rootRouteImport

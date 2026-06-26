@@ -3,12 +3,12 @@ import { Link } from '@tanstack/react-router';
 export function Navbar(): React.JSX.Element {
   return (
     <>
-      <nav className="flex justify-center gap-4">
+      <nav className="flex gap-4 py-4 sm:justify-center">
         <Link
           activeProps={{
-            className: 'underline',
+            className: 'font-bold',
           }}
-          className="text-muted-foreground hover:text-foreground"
+          className="hover:underline"
           to="/"
         >
           Home
@@ -16,9 +16,9 @@ export function Navbar(): React.JSX.Element {
 
         <Link
           activeProps={{
-            className: 'underline',
+            className: 'font-bold',
           }}
-          className="text-muted-foreground hover:text-foreground"
+          className="hover:underline"
           to="/projects"
         >
           Projects
@@ -26,9 +26,9 @@ export function Navbar(): React.JSX.Element {
 
         <Link
           activeProps={{
-            className: 'underline',
+            className: 'font-bold',
           }}
-          className="text-muted-foreground hover:text-foreground"
+          className="hover:underline"
           to="/about"
         >
           About
@@ -36,9 +36,9 @@ export function Navbar(): React.JSX.Element {
 
         <Link
           activeProps={{
-            className: 'underline',
+            className: 'font-bold',
           }}
-          className="text-muted-foreground hover:text-foreground"
+          className="hover:underline"
           to="/contact"
         >
           Contact

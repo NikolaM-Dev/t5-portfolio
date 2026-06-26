@@ -1,14 +1,16 @@
 import { createFileRoute } from '@tanstack/react-router';
 
+import { Main } from '#/shared/components/main';
+
 export const Route = createFileRoute('/_layout/contact')({
   component: RouteComponent,
 });
 
 function RouteComponent() {
   return (
-    <main>
-      <h1 className="my-4 text-4xl font-bold">Contact</h1>
-      <form className="flex flex-col gap-4">
+    <Main>
+      <h1 className="text-4xl font-bold">Contact</h1>
+      <form className="mt-6 flex max-w-min flex-col gap-4">
         <div className="flex items-center justify-between gap-4">
           <label htmlFor="name">Name</label>
           <input
@@ -38,6 +40,6 @@ function RouteComponent() {
           />
         </div>
       </form>
-    </main>
+    </Main>
   );
 }
