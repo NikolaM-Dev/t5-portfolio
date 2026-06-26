@@ -1,5 +1,5 @@
-# Learn TanStack Start
+# Learn TanStack Start by Building Projects
 
-## List
+## Projects
 
-- t5-porfolio
+- [t5-porfolio](https://github.com/NikolaM-Dev/learn)
