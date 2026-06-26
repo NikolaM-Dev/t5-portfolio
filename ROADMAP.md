@@ -498,9 +498,9 @@ Once you've completed these exercises:
   - [x] Create the home page (`/`) with name, title, introduction, and links ✅ 2026-06-25
   - [x] Create the about page (`/about`) with background, skills, and education/experience ✅ 2026-06-25
   - [ ] Create the projects page (`/projects`) with 3-5 project cards
-  - [ ] Create the contact page (`/contact`) with a UI-only form and contact links
-  - [ ] Add a shared layout with header and footer
-  - [ ] Implement header navigation with active link styling
+  - [x] Create the contact page (`/contact`) with a UI-only form and contact links ✅ 2026-06-26
+  - [x] Add a shared layout with header and footer ✅ 2026-06-26
+  - [x] Implement header navigation with active link styling ✅ 2026-06-26
   - [ ] Style with Tailwind CSS and make the site responsive
   - [ ] Bonus: add dark mode, transitions, custom 404, or animations
 - [ ] Build Exercise 2: Blog with Dynamic Routes
