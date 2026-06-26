@@ -497,7 +497,7 @@ Once you've completed these exercises:
 - [ ] Build Exercise 1: Personal Portfolio Site
   - [x] Create the home page (`/`) with name, title, introduction, and links ✅ 2026-06-25
   - [x] Create the about page (`/about`) with background, skills, and education/experience ✅ 2026-06-25
-  - [ ] Create the projects page (`/projects`) with 3-5 project cards
+  - [x] Create the projects page (`/projects`) with 3-5 project cards ✅ 2026-06-26
   - [x] Create the contact page (`/contact`) with a UI-only form and contact links ✅ 2026-06-26
   - [x] Add a shared layout with header and footer ✅ 2026-06-26
   - [x] Implement header navigation with active link styling ✅ 2026-06-26
