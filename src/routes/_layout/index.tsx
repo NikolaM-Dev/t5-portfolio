@@ -1,10 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute('/')({ component: Home });
+export const Route = createFileRoute('/_layout/')({ component: Home });
 
 function Home() {
   return (
-    <main className="p-10">
+    <main>
       <h1 className="my-4 text-4xl font-bold">Home</h1>
 
       <h2 className="my-4 text-3xl font-bold">Introduction</h2>
@@ -22,7 +22,7 @@ function Home() {
         incluye versiones de Lorem Ipsum.
       </p>
 
-      <h2 className="my-4 text-3xl font-bold">Introduction</h2>
+      <h2 className="my-4 text-3xl font-bold">Links</h2>
       <ul className="list-inside list-disc">
         <li>
           <a
