@@ -1,7 +1,8 @@
 import { createFileRoute, Outlet } from '@tanstack/react-router';
 
-import { Footer } from '#/shared/components/footer';
-import { Navbar } from '#/shared/components/navbar';
+import { Footer } from '#/components/footer';
+import { Navbar } from '#/components/navbar';
+import { ThemeToggle } from '#/components/theme-toggle';
 
 export const Route = createFileRoute('/_layout')({
   component: RouteComponent,
@@ -13,6 +14,7 @@ function RouteComponent() {
       <section>
         <header>
           <Navbar />
+          <ThemeToggle />
         </header>
         <hr />
         <Outlet />

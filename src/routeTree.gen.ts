@@ -8,72 +8,72 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as SplatRouteImport } from './routes/$';
-import { Route as rootRouteImport } from './routes/__root';
-import { Route as LayoutRouteImport } from './routes/_layout';
-import { Route as LayoutAboutRouteImport } from './routes/_layout/about';
-import { Route as LayoutContactRouteImport } from './routes/_layout/contact';
-import { Route as LayoutIndexRouteImport } from './routes/_layout/index';
-import { Route as LayoutProjectsRouteImport } from './routes/_layout/projects';
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as LayoutRouteImport } from './routes/_layout'
+import { Route as SplatRouteImport } from './routes/$'
+import { Route as LayoutIndexRouteImport } from './routes/_layout/index'
+import { Route as LayoutProjectsRouteImport } from './routes/_layout/projects'
+import { Route as LayoutContactRouteImport } from './routes/_layout/contact'
+import { Route as LayoutAboutRouteImport } from './routes/_layout/about'
 
 const LayoutRoute = LayoutRouteImport.update({
   id: '/_layout',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const SplatRoute = SplatRouteImport.update({
   id: '/$',
   path: '/$',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const LayoutIndexRoute = LayoutIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => LayoutRoute,
-} as any);
+} as any)
 const LayoutProjectsRoute = LayoutProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
   getParentRoute: () => LayoutRoute,
-} as any);
+} as any)
 const LayoutContactRoute = LayoutContactRouteImport.update({
   id: '/contact',
   path: '/contact',
   getParentRoute: () => LayoutRoute,
-} as any);
+} as any)
 const LayoutAboutRoute = LayoutAboutRouteImport.update({
   id: '/about',
   path: '/about',
   getParentRoute: () => LayoutRoute,
-} as any);
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/$': typeof SplatRoute;
-  '/': typeof LayoutIndexRoute;
-  '/about': typeof LayoutAboutRoute;
-  '/contact': typeof LayoutContactRoute;
-  '/projects': typeof LayoutProjectsRoute;
+  '/$': typeof SplatRoute
+  '/': typeof LayoutIndexRoute
+  '/about': typeof LayoutAboutRoute
+  '/contact': typeof LayoutContactRoute
+  '/projects': typeof LayoutProjectsRoute
 }
 export interface FileRoutesByTo {
-  '/$': typeof SplatRoute;
-  '/about': typeof LayoutAboutRoute;
-  '/contact': typeof LayoutContactRoute;
-  '/projects': typeof LayoutProjectsRoute;
-  '/': typeof LayoutIndexRoute;
+  '/$': typeof SplatRoute
+  '/about': typeof LayoutAboutRoute
+  '/contact': typeof LayoutContactRoute
+  '/projects': typeof LayoutProjectsRoute
+  '/': typeof LayoutIndexRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  '/$': typeof SplatRoute;
-  '/_layout': typeof LayoutRouteWithChildren;
-  '/_layout/about': typeof LayoutAboutRoute;
-  '/_layout/contact': typeof LayoutContactRoute;
-  '/_layout/projects': typeof LayoutProjectsRoute;
-  '/_layout/': typeof LayoutIndexRoute;
+  __root__: typeof rootRouteImport
+  '/$': typeof SplatRoute
+  '/_layout': typeof LayoutRouteWithChildren
+  '/_layout/about': typeof LayoutAboutRoute
+  '/_layout/contact': typeof LayoutContactRoute
+  '/_layout/projects': typeof LayoutProjectsRoute
+  '/_layout/': typeof LayoutIndexRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths: '/$' | '/' | '/about' | '/contact' | '/projects';
-  fileRoutesByTo: FileRoutesByTo;
-  to: '/$' | '/about' | '/contact' | '/projects' | '/';
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/$' | '/' | '/about' | '/contact' | '/projects'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/$' | '/about' | '/contact' | '/projects' | '/'
   id:
     | '__root__'
     | '/$'
@@ -81,66 +81,66 @@ export interface FileRouteTypes {
     | '/_layout/about'
     | '/_layout/contact'
     | '/_layout/projects'
-    | '/_layout/';
-  fileRoutesById: FileRoutesById;
+    | '/_layout/'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  SplatRoute: typeof SplatRoute;
-  LayoutRoute: typeof LayoutRouteWithChildren;
+  SplatRoute: typeof SplatRoute
+  LayoutRoute: typeof LayoutRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/_layout': {
-      id: '/_layout';
-      path: '';
-      fullPath: '/';
-      preLoaderRoute: typeof LayoutRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/_layout'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof LayoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$': {
-      id: '/$';
-      path: '/$';
-      fullPath: '/$';
-      preLoaderRoute: typeof SplatRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_layout/': {
-      id: '/_layout/';
-      path: '/';
-      fullPath: '/';
-      preLoaderRoute: typeof LayoutIndexRouteImport;
-      parentRoute: typeof LayoutRoute;
-    };
+      id: '/_layout/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof LayoutIndexRouteImport
+      parentRoute: typeof LayoutRoute
+    }
     '/_layout/projects': {
-      id: '/_layout/projects';
-      path: '/projects';
-      fullPath: '/projects';
-      preLoaderRoute: typeof LayoutProjectsRouteImport;
-      parentRoute: typeof LayoutRoute;
-    };
+      id: '/_layout/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof LayoutProjectsRouteImport
+      parentRoute: typeof LayoutRoute
+    }
     '/_layout/contact': {
-      id: '/_layout/contact';
-      path: '/contact';
-      fullPath: '/contact';
-      preLoaderRoute: typeof LayoutContactRouteImport;
-      parentRoute: typeof LayoutRoute;
-    };
+      id: '/_layout/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof LayoutContactRouteImport
+      parentRoute: typeof LayoutRoute
+    }
     '/_layout/about': {
-      id: '/_layout/about';
-      path: '/about';
-      fullPath: '/about';
-      preLoaderRoute: typeof LayoutAboutRouteImport;
-      parentRoute: typeof LayoutRoute;
-    };
+      id: '/_layout/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof LayoutAboutRouteImport
+      parentRoute: typeof LayoutRoute
+    }
   }
 }
 
 interface LayoutRouteChildren {
-  LayoutAboutRoute: typeof LayoutAboutRoute;
-  LayoutContactRoute: typeof LayoutContactRoute;
-  LayoutProjectsRoute: typeof LayoutProjectsRoute;
-  LayoutIndexRoute: typeof LayoutIndexRoute;
+  LayoutAboutRoute: typeof LayoutAboutRoute
+  LayoutContactRoute: typeof LayoutContactRoute
+  LayoutProjectsRoute: typeof LayoutProjectsRoute
+  LayoutIndexRoute: typeof LayoutIndexRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
@@ -148,25 +148,24 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutContactRoute: LayoutContactRoute,
   LayoutProjectsRoute: LayoutProjectsRoute,
   LayoutIndexRoute: LayoutIndexRoute,
-};
+}
 
 const LayoutRouteWithChildren =
-  LayoutRoute._addFileChildren(LayoutRouteChildren);
+  LayoutRoute._addFileChildren(LayoutRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   SplatRoute: SplatRoute,
   LayoutRoute: LayoutRouteWithChildren,
-};
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()
 
-import type { createStart } from '@tanstack/react-start';
-
-import type { getRouter } from './router.tsx';
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
 declare module '@tanstack/react-start' {
   interface Register {
-    ssr: true;
-    router: Awaited<ReturnType<typeof getRouter>>;
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
   }
 }
