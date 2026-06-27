@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { Main } from '#/shared/components/main';
+import { Main } from '#/components/main';
 
 export const Route = createFileRoute('/_layout/')({ component: Home });
 
@@ -10,7 +10,7 @@ function Home() {
       <h1 className="text-4xl font-bold">Home</h1>
 
       <h2 className="my-4 text-3xl font-bold">Introduction</h2>
-      <p>
+      <p className="dark:bg-red-700">
         Lorem Ipsum es simplemente el texto de relleno de las imprentas y
         archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de
         las industrias desde el año 1500, cuando un impresor (N. del T. persona

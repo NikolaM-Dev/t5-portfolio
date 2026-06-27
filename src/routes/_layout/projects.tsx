@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { ProjectCard } from '#/features/projects/components/project-card';
-import { Main } from '#/shared/components/main';
+import { Main } from '#/components/main';
+import { ProjectCard } from '#/components/project-card';
 
 export const Route = createFileRoute('/_layout/projects')({
   component: RouteComponent,
