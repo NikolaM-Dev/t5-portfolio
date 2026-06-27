@@ -1,8 +1,8 @@
+import netlify from '@netlify/vite-plugin-tanstack-start';
 import tailwindcss from '@tailwindcss/vite';
 import { devtools } from '@tanstack/devtools-vite';
 import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import viteReact from '@vitejs/plugin-react';
-import { nitro } from 'nitro/vite';
 import { defineConfig, lazyPlugins } from 'vite-plus';
 
 const config = defineConfig({
@@ -40,9 +40,9 @@ const config = defineConfig({
   resolve: { tsconfigPaths: true },
   plugins: lazyPlugins(() => [
     devtools(),
-    nitro(),
     tailwindcss(),
     tanstackStart(),
+    netlify(),
     viteReact(),
   ]),
 });
