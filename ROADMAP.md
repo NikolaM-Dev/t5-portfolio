@@ -23,6 +23,8 @@
   - [ ] Prevent theme flash on initial page load ➕ 2026-06-27
   - [ ] Test light mode, dark mode, and system preference behavior across all pages ➕ 2026-06-27
 - [ ] Not found component ➕ 2026-06-27
+- [ ] Add custom anchor component ➕ 2026-06-30
+- [ ] Add custom heading components ➕ 2026-06-30
 
 ## 🗃️ Archive
 
