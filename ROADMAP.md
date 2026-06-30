@@ -6,13 +6,6 @@
 
 ## 🎒 Backlog
 
-- [x] Create the home page (`/`) with name, title, introduction, and links ✅ 2026-06-25
-- [x] Create the about page (`/about`) with background, skills, and education/experience ✅ 2026-06-25
-- [x] Create the projects page (`/projects`) with 3-5 project cards ✅ 2026-06-26
-- [x] Create the contact page (`/contact`) with a UI-only form and contact links ✅ 2026-06-26
-- [x] Add a shared layout with header and footer ✅ 2026-06-26
-- [x] Implement header navigation with active link styling ✅ 2026-06-26
-- [x] Style with Tailwind CSS and make the site responsive ✅ 2026-06-26
 - [ ] Dark mode support ➕ 2026-06-27
   - [x] Decide the theme strategy (system preference, manual toggle, and persisted choice) ➕ 2026-06-27 ✅ 2026-06-27
   - [x] Configure Tailwind CSS for class-based dark mode ➕ 2026-06-27 ✅ 2026-06-27
@@ -25,9 +18,23 @@
 - [ ] Not found component ➕ 2026-06-27
 - [ ] Add custom anchor component ➕ 2026-06-30
 - [ ] Add custom heading components ➕ 2026-06-30
+- [ ] Docs about how to use `cnfast` ➕ 2026-06-30
+- [ ] Docs about how to to use `cva` ➕ 2026-06-30
+- [ ] Docs about how to create a custom link component when using TanStack Start
+      ➕ 2026-06-30
+  - [ ] Add reference [Custom Link | TanStack Router Docs](https://tanstack.com/router/latest/docs/guide/custom-link#createlink-for-cross-cutting-concerns) ➕ 2026-06-30
+- [ ] Read about [ctix - barrel file generator using TypeScript Compiler API | imjuni](https://imjuni.github.io/imjuni/typescript/ctix/) ➕ 2026-06-30
+- [ ] Create my own implementation of the barrel file generator ➕ 2026-06-30
 
 ## 🗃️ Archive
 
+- [x] Create the home page (`/`) with name, title, introduction, and links ✅ 2026-06-25
+- [x] Create the about page (`/about`) with background, skills, and education/experience ✅ 2026-06-25
+- [x] Create the projects page (`/projects`) with 3-5 project cards ✅ 2026-06-26
+- [x] Create the contact page (`/contact`) with a UI-only form and contact links ✅ 2026-06-26
+- [x] Add a shared layout with header and footer ✅ 2026-06-26
+- [x] Implement header navigation with active link styling ✅ 2026-06-26
+- [x] Style with Tailwind CSS and make the site responsive ✅ 2026-06-26
 - [x] Setup ✅ 2026-06-27
   - [x] Setup oxfmt ✅ 2026-06-25
   - [x] Change to use exact dependencies ✅ 2026-06-25
