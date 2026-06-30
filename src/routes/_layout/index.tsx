@@ -1,16 +1,16 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { Main } from '#/components/main';
+import { Anchor, Heading, Main } from '#/components';
 
 export const Route = createFileRoute('/_layout/')({ component: Home });
 
 function Home() {
   return (
     <Main>
-      <h1 className="text-4xl font-bold">Home</h1>
+      <Heading level={1}>Home</Heading>
 
-      <h2 className="my-4 text-3xl font-bold">Introduction</h2>
-      <p className="dark:bg-red-700">
+      <Heading level={2}>Introduction</Heading>
+      <p>
         Lorem Ipsum es simplemente el texto de relleno de las imprentas y
         archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de
         las industrias desde el año 1500, cuando un impresor (N. del T. persona
@@ -24,31 +24,16 @@ function Home() {
         incluye versiones de Lorem Ipsum.
       </p>
 
-      <h2 className="my-4 text-3xl font-bold">Links</h2>
+      <Heading level={2}>Links</Heading>
       <ul className="list-inside list-disc">
         <li>
-          <a
-            className="text-purple-800 underline decoration-solid"
-            href="https://instagram.com"
-          >
-            Instagram
-          </a>
+          <Anchor href="https://instagram.com">Instagram</Anchor>
         </li>
         <li>
-          <a
-            className="text-purple-800 underline decoration-solid"
-            href="https://github.com"
-          >
-            GitHub
-          </a>
+          <Anchor href="https://github.com">GitHub</Anchor>
         </li>
         <li>
-          <a
-            className="text-purple-800 underline decoration-solid"
-            href="https://facebook.com"
-          >
-            Facebook
-          </a>
+          <Anchor href="https://facebook.com">Facebook</Anchor>
         </li>
       </ul>
     </Main>
