@@ -46,7 +46,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
   return (
     <ThemeContext value={{ onChange: handleChangeTheme, themeMode }}>
-      <html lang="en" data-theme={themeMode}>
+      <html
+        className="bg-flexoki-paper text-flexoki-black dark:bg-flexoki-black dark:text-flexoki-paper"
+        lang="en"
+        data-theme={themeMode}
+      >
         <head>
           <HeadContent />
         </head>
