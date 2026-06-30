@@ -1,4 +1,4 @@
-import { useTheme } from '#/contexts/theme-context';
+import { useTheme } from '#/contexts';
 
 export function ThemeToggle(): React.JSX.Element {
   const { themeMode, onChange } = useTheme();
