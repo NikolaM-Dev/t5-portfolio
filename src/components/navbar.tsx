@@ -3,7 +3,7 @@ import { Link } from '@tanstack/react-router';
 export function Navbar(): React.JSX.Element {
   return (
     <>
-      <nav className="flex gap-4 py-4 sm:justify-center">
+      <nav className="flex flex-col justify-center  gap-4 md:flex-row">
         <Link
           activeProps={{
             className: 'font-bold',
