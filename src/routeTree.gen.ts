@@ -10,19 +10,14 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LayoutRouteImport } from './routes/_layout'
-import { Route as SplatRouteImport } from './routes/$'
 import { Route as LayoutIndexRouteImport } from './routes/_layout/index'
 import { Route as LayoutProjectsRouteImport } from './routes/_layout/projects'
 import { Route as LayoutContactRouteImport } from './routes/_layout/contact'
 import { Route as LayoutAboutRouteImport } from './routes/_layout/about'
+import { Route as LayoutSplatRouteImport } from './routes/_layout/$'
 
 const LayoutRoute = LayoutRouteImport.update({
   id: '/_layout',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SplatRoute = SplatRouteImport.update({
-  id: '/$',
-  path: '/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LayoutIndexRoute = LayoutIndexRouteImport.update({
@@ -45,16 +40,21 @@ const LayoutAboutRoute = LayoutAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => LayoutRoute,
 } as any)
+const LayoutSplatRoute = LayoutSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => LayoutRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/$': typeof SplatRoute
   '/': typeof LayoutIndexRoute
+  '/$': typeof LayoutSplatRoute
   '/about': typeof LayoutAboutRoute
   '/contact': typeof LayoutContactRoute
   '/projects': typeof LayoutProjectsRoute
 }
 export interface FileRoutesByTo {
-  '/$': typeof SplatRoute
+  '/$': typeof LayoutSplatRoute
   '/about': typeof LayoutAboutRoute
   '/contact': typeof LayoutContactRoute
   '/projects': typeof LayoutProjectsRoute
@@ -62,8 +62,8 @@ export interface FileRoutesByTo {
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/$': typeof SplatRoute
   '/_layout': typeof LayoutRouteWithChildren
+  '/_layout/$': typeof LayoutSplatRoute
   '/_layout/about': typeof LayoutAboutRoute
   '/_layout/contact': typeof LayoutContactRoute
   '/_layout/projects': typeof LayoutProjectsRoute
@@ -71,13 +71,13 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/$' | '/' | '/about' | '/contact' | '/projects'
+  fullPaths: '/' | '/$' | '/about' | '/contact' | '/projects'
   fileRoutesByTo: FileRoutesByTo
   to: '/$' | '/about' | '/contact' | '/projects' | '/'
   id:
     | '__root__'
-    | '/$'
     | '/_layout'
+    | '/_layout/$'
     | '/_layout/about'
     | '/_layout/contact'
     | '/_layout/projects'
@@ -85,7 +85,6 @@ export interface FileRouteTypes {
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  SplatRoute: typeof SplatRoute
   LayoutRoute: typeof LayoutRouteWithChildren
 }
 
@@ -96,13 +95,6 @@ declare module '@tanstack/react-router' {
       path: ''
       fullPath: '/'
       preLoaderRoute: typeof LayoutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/$': {
-      id: '/$'
-      path: '/$'
-      fullPath: '/$'
-      preLoaderRoute: typeof SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_layout/': {
@@ -133,10 +125,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutAboutRouteImport
       parentRoute: typeof LayoutRoute
     }
+    '/_layout/$': {
+      id: '/_layout/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof LayoutSplatRouteImport
+      parentRoute: typeof LayoutRoute
+    }
   }
 }
 
 interface LayoutRouteChildren {
+  LayoutSplatRoute: typeof LayoutSplatRoute
   LayoutAboutRoute: typeof LayoutAboutRoute
   LayoutContactRoute: typeof LayoutContactRoute
   LayoutProjectsRoute: typeof LayoutProjectsRoute
@@ -144,6 +144,7 @@ interface LayoutRouteChildren {
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
+  LayoutSplatRoute: LayoutSplatRoute,
   LayoutAboutRoute: LayoutAboutRoute,
   LayoutContactRoute: LayoutContactRoute,
   LayoutProjectsRoute: LayoutProjectsRoute,
@@ -154,7 +155,6 @@ const LayoutRouteWithChildren =
   LayoutRoute._addFileChildren(LayoutRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
-  SplatRoute: SplatRoute,
   LayoutRoute: LayoutRouteWithChildren,
 }
 export const routeTree = rootRouteImport

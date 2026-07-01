@@ -1,8 +1,6 @@
 import { createFileRoute, Outlet } from '@tanstack/react-router';
 
-import { Footer } from '#/components/footer';
-import { Navbar } from '#/components/navbar';
-import { ThemeToggle } from '#/components/theme-toggle';
+import { Footer, Divider, Navbar, ThemeToggle } from '#/components';
 
 export const Route = createFileRoute('/_layout')({
   component: RouteComponent,
@@ -17,12 +15,13 @@ function RouteComponent() {
 
           <ThemeToggle />
         </header>
-        <hr />
+
+        <Divider />
         <Outlet />
       </section>
 
       <section>
-        <hr />
+        <Divider />
         <Footer />
       </section>
     </div>

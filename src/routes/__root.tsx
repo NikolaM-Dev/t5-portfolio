@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import type { ThemeMode } from '#/types';
 
-import { ThemeContext } from '#/contexts/theme-context';
+import { ThemeContext } from '#/contexts';
 import { getThemeMode, MODE_KEY } from '#/utils/theme';
 
 import appCss from '../styles/globals.css?url';
