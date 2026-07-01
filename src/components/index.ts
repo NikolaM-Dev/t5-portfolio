@@ -1,4 +1,5 @@
 export * from './anchor';
+export * from './divider';
 export * from './footer';
 export * from './heading';
 export * from './label';
