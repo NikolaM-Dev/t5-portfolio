@@ -2,6 +2,8 @@ import { TanStackDevtools } from '@tanstack/react-devtools';
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router';
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
 
+import { getThemeModeFn } from '#/lib';
+
 import appCss from '../styles/globals.css?url';
 
 export const Route = createRootRoute({
@@ -25,16 +27,24 @@ export const Route = createRootRoute({
       },
     ],
   }),
+  beforeLoad: async () => ({ themeMode: await getThemeModeFn() }),
   shellComponent: RootDocument,
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const { themeMode } = Route.useRouteContext();
+
   return (
-    <html lang="en">
+    <html
+      className="bg-flexoki-paper text-flexoki-black dark:bg-flexoki-black dark:text-flexoki-paper"
+      lang="en"
+      data-theme={themeMode}
+    >
       <head>
         <HeadContent />
       </head>
-      <body>
+
+      <body className="antialiased">
         {children}
         <TanStackDevtools
           config={{

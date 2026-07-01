@@ -1,7 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-import { ProjectCard } from '#/features/projects/components/project-card';
-import { Main } from '#/shared/components/main';
+import { Heading, Main, ProjectCard } from '#/components';
 
 export const Route = createFileRoute('/_layout/projects')({
   component: RouteComponent,
@@ -12,7 +11,7 @@ function RouteComponent() {
 
   return (
     <Main>
-      <h1 className="text-4xl font-bold">Projects</h1>
+      <Heading level={1}>Projects</Heading>
 
       <section className="mt-6 grid items-center gap-6 md:grid-cols-2">
         {projects.map((_, i) => (
