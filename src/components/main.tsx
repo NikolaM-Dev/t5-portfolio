@@ -1,7 +1,9 @@
-type mainProps = {
-  children: React.ReactNode;
-};
+import cn from 'cnfast';
 
-export function Main({ children }: mainProps): React.JSX.Element {
-  return <main className="py-8">{children}</main>;
+type MainProps = {} & React.HTMLAttributes<HTMLElement>;
+
+export function Main(props: MainProps): React.JSX.Element {
+  const { className, children } = props;
+
+  return <main className={cn('py-8', className)}>{children}</main>;
 }
