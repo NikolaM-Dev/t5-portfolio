@@ -1,3 +1,5 @@
+import { Anchor, Heading } from '#/components';
+
 type ProjectCardProps = {
   title: string;
 };
@@ -6,9 +8,9 @@ export function ProjectCard(props: ProjectCardProps): React.JSX.Element {
   const { title } = props;
 
   return (
-    <article className="flex max-w-sm flex-col rounded border md:max-w-md">
-      <header className="border-b p-4">
-        <h2 className="text-center text-3xl font-bold">{title}</h2>
+    <article className="flex max-w-sm flex-col rounded border border-flexoki-600 md:max-w-md">
+      <header className="border-b border-flexoki-600 p-4">
+        <Heading level={2}>{title}</Heading>
       </header>
 
       <main className="p-4">
@@ -27,13 +29,8 @@ export function ProjectCard(props: ProjectCardProps): React.JSX.Element {
         </p>
       </main>
 
-      <footer className="border-t p-4 text-end">
-        <a
-          className="text-purple-800 underline decoration-solid"
-          href="https://github.com"
-        >
-          GitHub ↗️
-        </a>
+      <footer className="border-t border-flexoki-600 p-4 text-end">
+        <Anchor href="https://github.com">GitHub ↗️</Anchor>
       </footer>
     </article>
   );

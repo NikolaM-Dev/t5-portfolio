@@ -5,7 +5,8 @@ export function ThemeToggle(): React.JSX.Element {
 
   return (
     <select
-      className="mb-4 self-start py-1"
+      className="mb-4 self-start px-3 py-1.5 text-flexoki-600"
+      aria-label="Toggle theme"
       onChange={onChange}
       value={themeMode}
       name="theme"
