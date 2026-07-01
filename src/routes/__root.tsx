@@ -1,12 +1,8 @@
 import { TanStackDevtools } from '@tanstack/react-devtools';
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router';
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
-import { useState } from 'react';
 
-import type { ThemeMode } from '#/types';
-
-import { ThemeContext } from '#/contexts';
-import { getThemeMode, MODE_KEY } from '#/utils/theme';
+import { getThemeModeFn } from '#/lib';
 
 import appCss from '../styles/globals.css?url';
 
@@ -31,46 +27,38 @@ export const Route = createRootRoute({
       },
     ],
   }),
+  beforeLoad: async () => ({ themeMode: await getThemeModeFn() }),
   shellComponent: RootDocument,
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
-  const [themeMode, setThemeMode] = useState<ThemeMode>(() => getThemeMode());
-
-  const handleChangeTheme = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const nextThemeMode = e.target.value as ThemeMode;
-
-    localStorage.setItem(MODE_KEY, nextThemeMode);
-    setThemeMode(nextThemeMode);
-  };
+  const { themeMode } = Route.useRouteContext();
 
   return (
-    <ThemeContext value={{ onChange: handleChangeTheme, themeMode }}>
-      <html
-        className="bg-flexoki-paper text-flexoki-black dark:bg-flexoki-black dark:text-flexoki-paper"
-        lang="en"
-        data-theme={themeMode}
-      >
-        <head>
-          <HeadContent />
-        </head>
+    <html
+      className="bg-flexoki-paper text-flexoki-black dark:bg-flexoki-black dark:text-flexoki-paper"
+      lang="en"
+      data-theme={themeMode}
+    >
+      <head>
+        <HeadContent />
+      </head>
 
-        <body className="antialiased">
-          {children}
-          <TanStackDevtools
-            config={{
-              position: 'bottom-right',
-            }}
-            plugins={[
-              {
-                name: 'Tanstack Router',
-                render: <TanStackRouterDevtoolsPanel />,
-              },
-            ]}
-          />
-          <Scripts />
-        </body>
-      </html>
-    </ThemeContext>
+      <body className="antialiased">
+        {children}
+        <TanStackDevtools
+          config={{
+            position: 'bottom-right',
+          }}
+          plugins={[
+            {
+              name: 'Tanstack Router',
+              render: <TanStackRouterDevtoolsPanel />,
+            },
+          ]}
+        />
+        <Scripts />
+      </body>
+    </html>
   );
 }
