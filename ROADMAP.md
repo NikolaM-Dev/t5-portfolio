@@ -6,17 +6,8 @@
 
 ## 🎒 Backlog
 
-- [ ] Dark mode support ➕ 2026-06-27
-  - [x] Decide the theme strategy (system preference, manual toggle, and persisted choice) ➕ 2026-06-27 ✅ 2026-06-27
-  - [x] Configure Tailwind CSS for class-based dark mode ➕ 2026-06-27 ✅ 2026-06-27
-  - [x] Add theme state management and persist the selected theme in local storage ➕ 2026-06-27 ✅ 2026-06-27
-  - [x] Add a theme toggle control to the shared header/layout ➕ 2026-06-27 ✅ 2026-06-30
-  - [x] Apply dark mode colors to the global page background, typography, links, cards, forms, header, and footer ➕ 2026-06-27 ✅ 2026-07-01
-  - [ ] Ensure active navigation, focus states, hover states, and form controls are accessible in both themes ➕ 2026-06-27
-  - [ ] Prevent theme flash on initial page load ➕ 2026-06-27
-  - [ ] Test light mode, dark mode, and system preference behavior across all pages ➕ 2026-06-27
 - [ ] Docs about how to use `cnfast` ➕ 2026-06-30
-- [ ] Docs about how to to use `cva` ➕ 2026-06-30
+- [ ] Docs about how to use `cva` ➕ 2026-06-30
 - [ ] Docs about how to create a custom link component when using TanStack Start
       ➕ 2026-06-30
   - [ ] Add reference [Custom Link | TanStack Router Docs](https://tanstack.com/router/latest/docs/guide/custom-link#createlink-for-cross-cutting-concerns) ➕ 2026-06-30
@@ -25,6 +16,15 @@
 
 ## 🗃️ Archive
 
+- [x] Dark mode support ➕ 2026-06-27 ✅ 2026-07-01
+  - [x] Decide the theme strategy (system preference, manual toggle, and persisted choice) ➕ 2026-06-27 ✅ 2026-06-27
+  - [x] Configure Tailwind CSS for class-based dark mode ➕ 2026-06-27 ✅ 2026-06-27
+  - [x] Add theme state management and persist the selected theme in local storage ➕ 2026-06-27 ✅ 2026-06-27
+  - [x] Add a theme toggle control to the shared header/layout ➕ 2026-06-27 ✅ 2026-06-30
+  - [x] Apply dark mode colors to the global page background, typography, links, cards, forms, header, and footer ➕ 2026-06-27 ✅ 2026-07-01
+  - [x] Ensure active navigation, focus states, hover states, and form controls are accessible in both themes ➕ 2026-06-27 ✅ 2026-07-01
+  - [x] Prevent theme flash on initial page load ➕ 2026-06-27 ✅ 2026-07-01
+  - [x] Test light mode, dark mode, and system preference behavior across all pages ➕ 2026-06-27 ✅ 2026-07-01
 - [x] Not found component ➕ 2026-06-27 ✅ 2026-07-01
 - [x] Add custom anchor component ➕ 2026-06-30 ✅ 2026-06-30
 - [x] Add custom heading components ➕ 2026-06-30 ✅ 2026-06-30
