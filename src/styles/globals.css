@@ -1,6 +1,18 @@
 @import 'tailwindcss';
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark {
+  &:where([data-theme='dark'], [data-theme='dark'] *) {
+    @slot;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:where([data-theme='auto'], [data-theme='auto'] *) {
+      @slot;
+    }
+  }
+}
+
+@custom-variant light (&:where([data-theme=light], [data-theme=light] *));
 
 * {
   box-sizing: border-box;
