@@ -10,14 +10,11 @@
   - [x] Decide the theme strategy (system preference, manual toggle, and persisted choice) ➕ 2026-06-27 ✅ 2026-06-27
   - [x] Configure Tailwind CSS for class-based dark mode ➕ 2026-06-27 ✅ 2026-06-27
   - [x] Add theme state management and persist the selected theme in local storage ➕ 2026-06-27 ✅ 2026-06-27
-  - [ ] Add a theme toggle control to the shared header/layout ➕ 2026-06-27
-  - [ ] Apply dark mode colors to the global page background, typography, links, cards, forms, header, and footer ➕ 2026-06-27
+  - [x] Add a theme toggle control to the shared header/layout ➕ 2026-06-27 ✅ 2026-06-30
+  - [x] Apply dark mode colors to the global page background, typography, links, cards, forms, header, and footer ➕ 2026-06-27 ✅ 2026-07-01
   - [ ] Ensure active navigation, focus states, hover states, and form controls are accessible in both themes ➕ 2026-06-27
   - [ ] Prevent theme flash on initial page load ➕ 2026-06-27
   - [ ] Test light mode, dark mode, and system preference behavior across all pages ➕ 2026-06-27
-- [ ] Not found component ➕ 2026-06-27
-- [ ] Add custom anchor component ➕ 2026-06-30
-- [ ] Add custom heading components ➕ 2026-06-30
 - [ ] Docs about how to use `cnfast` ➕ 2026-06-30
 - [ ] Docs about how to to use `cva` ➕ 2026-06-30
 - [ ] Docs about how to create a custom link component when using TanStack Start
@@ -28,6 +25,9 @@
 
 ## 🗃️ Archive
 
+- [x] Not found component ➕ 2026-06-27 ✅ 2026-07-01
+- [x] Add custom anchor component ➕ 2026-06-30 ✅ 2026-06-30
+- [x] Add custom heading components ➕ 2026-06-30 ✅ 2026-06-30
 - [x] Create the home page (`/`) with name, title, introduction, and links ✅ 2026-06-25
 - [x] Create the about page (`/about`) with background, skills, and education/experience ✅ 2026-06-25
 - [x] Create the projects page (`/projects`) with 3-5 project cards ✅ 2026-06-26
