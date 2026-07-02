@@ -14,7 +14,7 @@ function RouteComponent() {
     <Main>
       <Heading level={1}>About</Heading>
 
-      <Heading level={2}>Backgrounb</Heading>
+      <Heading level={2}>Background</Heading>
       <p>
         Lorem Ipsum es simplemente el texto de relleno de las imprentas y
         archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de
