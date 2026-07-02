@@ -1,206 +1,105 @@
-# T5 Portfolio
+<h3 align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/NikolaM-Dev/t5-portfolio/main/docs/assets/logo.svg" width="100" />
+  <br>
+  T5 Portfolio 💼📈
+  <img alt="Gap" src="https://raw.githubusercontent.com/NikolaM-Dev/base-repo_tmpl/main/docs/assets/gap.svg" height="32" width="0"/>
+</h3>
 
-Welcome to your new TanStack Start app!
+<p align="center">
+  <a href="https://github.com/NikolaM-Dev/t5-portfolio/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/NikolaM-Dev/t5-portfolio?style=flat&colorA=32302f&colorB=54524c"></a>
+  <a href="https://github.com/NikolaM-Dev/t5-portfolio/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/NikolaM-Dev/t5-portfolio?style=flat&colorA=32302f&colorB=a9b665"></a>
+  <a href="https://github.com/NikolaM-Dev/t5-portfolio/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/NikolaM-Dev/t5-portfolio?style=flat&colorA=32302f&colorB=d8a657"></a>
+  <a href="https://github.com/NikolaM-Dev/t5-portfolio/issues"><img src="https://img.shields.io/github/issues/NikolaM-Dev/t5-portfolio?style=flat&colorA=32302f&colorB=ea6062"></a>
+  <a href="https://github.com/NikolaM-Dev/t5-portfolio/commits/main/"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/NikolaM-Dev/t5-portfolio?style=flat&colorA=32302f&colorB=fe8019"></a>
+</p>
 
-# Getting Started
+<div align="center">
+  <figure>
+    <img alt="Preview" src="https://raw.githubusercontent.com/NikolaM-Dev/t5-portfolio/main/docs/assets/preview.jpg">
+    <br>
+    <figcaption><i>Preview</i></figcaption>
+  </figure>
+</div>
 
-To run this application:
+&nbsp;
+
+<details><summary>👉 Table of Contents</summary>
+
+- [📍 Overview](#-overview)
+- [✨ Features](#-features)
+- [⛅ Behind The Code](#-behind-the-code)
+  - [🌈 Inspiration](#-inspiration)
+  - [💡 Challenges / Learnings](#-challenges--learnings)
+- [⚡ Quick Start](#-quick-start)
+  - [🏕️ Run Locally](#️-run-locally)
+  - [🛣️️ ROADMAP](#️️-roadmap)
+- [🫂 Acknowledgments](#-acknowledgments)
+
+</details>
+
+## 📍 Overview
+
+> A learning-first portfolio built with TanStack Start.
+
+T5 Portfolio is my first hands-on project with TanStack Start: a small
+portfolio used to practice file-based routing, reusable React components,
+server functions, cookie-based theme persistence, Tailwind CSS styling, and
+Netlify deployment. The goal is build the
+technical foundation I need for future SaaS products.
+
+## ✨ Features
+
+- **Dark Mode** with system preference support and no flicker.
+- **Netlify Deploy**
+- **Resposive Design**
+
+## ⛅ Behind The Code
+
+### 🌈 Inspiration
+
+- [hirwajeaneric/TanStack-Start-Course-Starter-to-Mastery](https://github.com/hirwajeaneric/TanStack-Start-Course-Starter-to-Mastery) exercises to _Learn TanStack Start by Building_
+
+### 💡 Challenges / Learnings
+
+- Learn to use `zod` and why `valibot` still need to be polished to be as handy
+  as `zod`.
+- Learn about how to create reusable components with extensible props and
+  variants using `class-variance-authority` and `cnfast`.
+- Understand the resason behind the errors while trying to use the `localstorage`
+  API in a _Server Function_ and how to approach it using cookies and route contexts.
+- Deploy the site using _Netlify_. I failed trying to deploy it using _Vercel_. And the documentaion is a bit confusing.
+
+## ⚡ Quick Start
+
+### 🏕️ Run Locally
 
 ```bash
-pnpm install
-pnpm dev
+git clone https://github.com/NikolaM-Dev/t5-portfolio.git
+cd t5-portfolio
+
+vp install # or `pnpm install`
+vp run dev # or `pnpm run dev`
 ```
 
-# Building For Production
+### 🛣️️ ROADMAP
 
-To build this application for production:
+See the [ROADMAP](./ROADMAP.md) for upcoming features, feel free to fork, tweak,
+or open an issue if you spot a bug or want to collaborate.
 
-```bash
-pnpm build
-```
+## 🫂 Acknowledgments
 
-## Testing
+- [Dark Mode in TanStack Start (No Flicker + TailwindCSS) - YouTube](https://www.youtube.com/watch?v=h8QJ-keNnHw)
+  – for show me how to get advange of the TanStack Start features.
+- [Custom Link | TanStack Router Docs](https://tanstack.com/router/latest/docs/guide/custom-link) - for teach me how to customize their `Link` component.
 
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+&nbsp;
 
-```bash
-pnpm test
-```
+<p align="center"><img alt="Footer" src="https://raw.githubusercontent.com/NikolaM-Dev/base-repo_tmpl/main/docs/assets/footer.svg" /></p>
 
-## Styling
-
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
-
-### Removing Tailwind CSS
-
-If you prefer not to use Tailwind CSS:
-
-1. Remove the demo pages in `src/routes/demo/`
-2. Replace the Tailwind import in `src/styles.css` with your own styles
-3. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
-4. Uninstall the packages: `pnpm add @tailwindcss/vite tailwindcss --dev`
-
-## Deploy with Nitro
-
-This project uses Nitro as a generic server adapter, so it can run on any Node-compatible host.
-
-```bash
-npm run build
-node dist/server/index.mjs
-```
-
-The build output is a self-contained Node server. To deploy, push the `dist/` directory to your host (Render, Fly.io, your own VPS, etc.) and run the server command above.
-
-For host-specific presets (Vercel, Netlify, Cloudflare, AWS Lambda, etc.) and tuning, see https://v3.nitro.build/deploy.
-
-## Routing
-
-This project uses [TanStack Router](https://tanstack.com/router) with file-based routing. Routes are managed as files in `src/routes`.
-
-### Adding A Route
-
-To add a new route to your application just add a new file in the `./src/routes` directory.
-
-TanStack will automatically generate the content of the route file for you.
-
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from '@tanstack/react-router';
-```
-
-Then anywhere in your JSX you can use it like so:
-
-```tsx
-<Link to="/about">About</Link>
-```
-
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you render `{children}` in the `shellComponent`.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router';
-
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My App' },
-    ],
-  }),
-  shellComponent: ({ children }) => (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <header>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-          </nav>
-        </header>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  ),
-});
-```
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-## Server Functions
-
-TanStack Start provides server functions that allow you to write server-side code that seamlessly integrates with your client components.
-
-```tsx
-import { createServerFn } from '@tanstack/react-start';
-
-const getServerTime = createServerFn({
-  method: 'GET',
-}).handler(async () => {
-  return new Date().toISOString();
-});
-
-// Use in a component
-function MyComponent() {
-  const [time, setTime] = useState('');
-
-  useEffect(() => {
-    getServerTime().then(setTime);
-  }, []);
-
-  return <div>Server time: {time}</div>;
-}
-```
-
-## API Routes
-
-You can create API routes by using the `server` property in your route definitions:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router';
-import { json } from '@tanstack/react-start';
-
-export const Route = createFileRoute('/api/hello')({
-  server: {
-    handlers: {
-      GET: () => json({ message: 'Hello, World!' }),
-    },
-  },
-});
-```
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router';
-
-export const Route = createFileRoute('/people')({
-  loader: async () => {
-    const response = await fetch('https://swapi.dev/api/people');
-    return response.json();
-  },
-  component: PeopleComponent,
-});
-
-function PeopleComponent() {
-  const data = Route.useLoaderData();
-  return (
-    <ul>
-      {data.results.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ul>
-  );
-}
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-# Demo files
-
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
-
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
-
-For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+<p align="center">⭐ Hit the Star Button if You Found This Useful ⭐</p>
+<p align="center">
+  <a href="https://x.com/nikolam_dev" target="_blank"><img alt="X (Twitter) Icon" src="https://raw.githubusercontent.com/NikolaM-Dev/base-repo_tmpl/main/docs/assets/twitter-x.svg"></a>
+  <a href="https://www.linkedin.com/in/nikolam-dev" target="_blank"><img alt="LinkedIn Icon" src="https://raw.githubusercontent.com/NikolaM-Dev/base-repo_tmpl/main/docs/assets/linkedin.svg"></a>
+  <a href="https://github.com/NikolaM-Dev" target="_blank"><img alt="GitHub Icon" src="https://raw.githubusercontent.com/NikolaM-Dev/base-repo_tmpl/main/docs/assets/github.svg"></a>
+  <a href="#readme" target="_blank"><img alt="Go to Top Icon" src="https://raw.githubusercontent.com/NikolaM-Dev/base-repo_tmpl/main/docs/assets/top.svg"></a>
+</p>
