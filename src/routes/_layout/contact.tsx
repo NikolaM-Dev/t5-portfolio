@@ -24,6 +24,7 @@ function RouteComponent() {
         <div className="flex items-center justify-between gap-4">
           <Label htmlFor="email">Email</Label>
           <input
+            id="email"
             className="rounded border px-2 py-1"
             type="email"
             placeholder="Email"

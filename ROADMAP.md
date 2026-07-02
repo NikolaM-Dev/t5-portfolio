@@ -6,6 +6,10 @@
 
 ## 🎒 Backlog
 
+- [ ] Rewrite README so it explains what the project is, why it exists, what was learned, how to run it, and what is next ➕ 2026-07-02
+- [ ] Update app metadata/title from `TanStack Start Starter` to real project-specific SEO metadata ➕ 2026-07-02
+- [ ] Make the contact form functional with submit button, Zod validation, server function, success/error states, and spam protection plan ➕ 2026-07-02
+- [ ] Add behavior-focused tests for navigation, theme mode, project cards, and contact form validation ➕ 2026-07-02
 - [ ] Docs about how to use `cnfast` ➕ 2026-06-30
 - [ ] Docs about how to use `cva` ➕ 2026-06-30
 - [ ] Docs about how to create a custom link component when using TanStack Start
@@ -16,6 +20,7 @@
 
 ## 🗃️ Archive
 
+- [x] Fix contact form accessibility issues, including matching `Label htmlFor` values with input `id` attributes ➕ 2026-07-02 ✅ 2026-07-02
 - [x] Dark mode support ➕ 2026-06-27 ✅ 2026-07-01
   - [x] Decide the theme strategy (system preference, manual toggle, and persisted choice) ➕ 2026-06-27 ✅ 2026-06-27
   - [x] Configure Tailwind CSS for class-based dark mode ➕ 2026-06-27 ✅ 2026-06-27
