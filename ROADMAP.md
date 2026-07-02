@@ -19,6 +19,8 @@
 
 ## 🗃️ Archive
 
+- [x] Fix typo issue in `/about` ➕ 2026-07-02 ✅ 2026-07-02
+- [x] Remove the unneded padding in `theme-toggle` component ➕ 2026-07-02 ✅ 2026-07-02
 - [x] Rewrite README so it explains what the project is, why it exists, what was learned, how to run it, and what is next ➕ 2026-07-02 ✅ 2026-07-02
 - [x] Fix contact form accessibility issues, including matching `Label htmlFor` values with input `id` attributes ➕ 2026-07-02 ✅ 2026-07-02
 - [x] Dark mode support ➕ 2026-06-27 ✅ 2026-07-01
